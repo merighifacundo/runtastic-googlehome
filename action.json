@@ -1,0 +1,26 @@
+{
+    "actions": [
+      {
+        "description": "MyRunHub Leaderboard",
+        "name": "MAIN",
+        "fulfillment": {
+          "conversationName": "leaderboardConversation"
+        },
+        "intent": {
+          "name": "actions.intent.MAIN",
+          "trigger": {
+            "queryPatterns": [
+              "positions",
+              "runners table"
+            ]
+          }
+        }
+      }
+    ],
+    "conversations": {
+      "leaderboardConversation": {
+        "name": "leaderboardConversation",
+        "url": "https://us-central1-myrunhubleaderboard.cloudfunctions.net/getLeaderboard"
+      }
+    }
+  }
